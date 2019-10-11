@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/STLLoader.js"></script>
+    <script src="js/dat.gui.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="loaderSTL.js"></script>
+    <script>
+      function desativar(b)
+      {
+        document.getElementById("g").disabled = "true";
+        document.getElementById("w").disabled = "true";
+      }
+    </script>
+  </head>
+  <style>
+    #viewer
+    {
+      cursor:grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+      margin:0 auto;
+      background-color: gray;
+      position: relative;
+      width: 100%; height: 500px;
+      margin: 0 auto;
+      padding: none;
+
+    }
+    #viewer:active
+    {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+  </style>
+  <body>
+    <!--Viewer-->
+    <div class="col-md-6">
+        <h3 class="text-center">Seu objeto</h3>
+      <div id="viewer">
+      </div>
+      <!--Input (encapsulado numa label com funções em js pra fazer funcionar)--><br />
+      <div style="float:right;">
+
+        <!-- a label abaixo é o botão que realiza o upload do arquivo, executa a função loader (como parâmetro recebe o arquivo enviado)
+        e exibe o nome do arquivo ao lado do botão-->
+        <!-- trecho de código para capturar o arquivo "upado" pelo usuário
+         <label class="btn btn-default btn-lg" for="arquivo3d">
+          <input type="file" name="arquivo3d" id="arquivo3d" style="display:none"
+          onchange="$('#upload-file-info').html(this.files[0].name), stlLoader(this), $('#nome-arquivo').html('<kbd>'+this.files[0].name)+'</kbd>'"/>
+          Escolher arquivo
+        </label>
+
+        <span class='label label-default' id="upload-file-info"></span>
+      -->
+
+        <!-- botões que fazem os respectivos modelos aparecerem no viewer -->
+        <button class="btn btn-default" id="g" onclick="stlLoader('stl/gibson.stl'), desativar()">Gibson</button>
+        <button class="btn btn-default" id="w" onclick="stlLoader('stl/stratocaster.stl'), desativar()">Stratocaster</button>
+
+      </div>
+      <!--/input-->
+    </div>
+    <!--/Viewer-->
+    <!--Fieldset das dimensões-->
+    <fieldset>
+      <h3>Dimensões</h3>
+      <ul>
+        <li id="alturaObjeto"><strong>Altura: </strong></li>
+        <li id="larguraObjeto"><strong>Largura: </strong></li>
+        <li id="comprimentoObjeto"><strong>Comprimento: </strong></li>
+        <li id="dimensoesTotal"><strong>Total: </strong></li>
+        <li id="volumeObjeto"><strong>Volume: </strong></li>
+      </ul>
+    </fieldset>
+    <!--/Fieldset das dimensões-->
+  </body>
+
+</html>
