@@ -12,6 +12,9 @@ Toda a documentação e aplicações da ferramenta pode ser encontrada no [site 
 - [Three.js Tutorial for Beginners - Red Stapler](https://www.youtube.com/playlist?list=PLbu98QxRH81KkLTN00OXhD8Y-pRVgTCnM)
 - [Three.js - documentação oficial](https://threejs.org/)
 
+## Importante
+Alguns navegadores podem bloquear o carregamento dos modelos devido à 'CORS policy'. Sendo assim, deve-se inserir o projeto em um servidor em sua máquina, como o WAMP Server.
+
 ## Autores
 - Phelip Logan
 
