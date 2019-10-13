@@ -10,9 +10,9 @@ Conta com apenas uma única página em HTML que contém um viewer para a apresen
 ## How To Run
 A maneira ideal de executar o projeto é o implementando em um servidor, pois devido há algumas restrições em certos navegadores, este pode não funcionar corretamente (vide a sessão **"Importante"**). Desta forma, caso encontre problemas ao executar, realize o download e instalação do WAMP (Windows) ou LAMP (Linux), execute-o, inclua o projeto dentro da pasta "www" e acesse o endereço deste no servidor (ex: **localhost/three-js**). 
 Abaixo, links de download e tutoriais de utilização dos programas supracitados:
-- [http://www.wampserver.com/en/](WAMP - download)
-- [https://www.youtube.com/watch?v=CsuMW21MRBg](WAMP - tutorial de utilização)
-- [https://www.hostinger.com.br/tutoriais/como-instalar-lamp-no-ubuntu/](LAMP - tutorial de instalação)
+- [http://www.wampserver.com/en/] (WAMP - download)
+- [https://www.youtube.com/watch?v=CsuMW21MRBg] (WAMP - tutorial de utilização)
+- [https://www.hostinger.com.br/tutoriais/como-instalar-lamp-no-ubuntu/] (LAMP - tutorial de instalação)
 
 ## Documentação e aplicações
 Toda a documentação e aplicações da ferramenta pode ser encontrada no [site do desenvolvedor](https://threejs.org). Abaixo, os links da documentação e uma playlist de tutoriais no YouTube que pode ser útil:
